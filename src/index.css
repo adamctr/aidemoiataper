@@ -8,14 +8,10 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #c8b3ee;
-}
-
 h1 {
   font-family: "Hammersmith One", sans-serif;
 }
 
-h1 {
-  -webkit-text-stroke: 2px #c8b3ee;
+.key {
+  background-image: url("./key.png");
 }
