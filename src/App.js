@@ -11,11 +11,45 @@ const splitKeySentence = (sentence) => sentence.split(SEPARATOR);
 const showKeyTemp = (key) => `${SEPARATOR}${KEY_SEP}${key}${SEPARATOR}`;
 
 const quotes = [
-  "Le succès n'est pas final, l'échec n'est pas fatal : c'est le courage qui compte.",
-  "L'échec est un tournant vers la réussite.",
-  "Il n'y a pas de succès sans échec.",
-  "L'échec est une opportunité de recommencer avec plus d'expérience.",
-  "Chaque échec est un atout pour la prochaine réussite.",
+  "L'étrange créature marche dans la forêt obscure.",
+  "L'océan rugit contre les rochers escarpés.",
+  "L'énigmatique message est découvert sur le mur.",
+  "L'arôme du café fraîchement moulu remplit la cuisine.",
+  "L'escalier en colimaçon mène au sommet de la tour.",
+  "Le clair de lune éclaire les toits de la ville.",
+  "Le silence résonne dans la grotte sombre.",
+  "La brise légère agite les feuilles des arbres.",
+  "La fumée s'élève de la cheminée dans le ciel nocturne.",
+  "La pluie tambourine contre les fenêtres de la maison.",
+  "Le parfum des fleurs sauvages envahit l'air.",
+  "Le grondement du tonnerre se fait entendre à l'horizon.",
+  "La lueur des étoiles scintille dans le ciel nocturne.",
+  "L'écho des pas résonne dans les rues désertes.",
+  "Le bruit des vagues se brisant sur la plage est apaisant.",
+  "La lumière des bougies vacille dans la pièce sombre.",
+  "Le gazouillis des oiseaux accompagne le lever du soleil.",
+  "La chaleur du feu de camp réchauffe les mains glacées.",
+  "Le fracas des vagues contre les rochers est assourdissant.",
+  "johndoe1@gmail.com",
+  "jane.doe@yahoo.com",
+  "michael.brown@hotmail.com",
+  "sarah_johnson@outlook.com",
+  "chris.wilson@aol.com",
+  "emma_b@gmail.com",
+
+  "brandon.s@gmail.com",
+  "jennifer.t@yahoo.com",
+  "matthew.r@hotmail.com",
+  "samantha.g@outlook.com",
+  "joseph.l@aol.com",
+
+  "4, rue du Faubourg Saint-Honoré, 75008 Paris",
+  "5, boulevard Saint-Germain, 75006 Paris",
+  "6, place de la Concorde, 75008 Paris",
+  "7, rue de Rivoli, 75001 Paris",
+  "8, rue de la Paix, 75002 Paris",
+  "9, avenue des Ternes, 75017 Paris",
+  "10, rue de Passy, 75016 Paris",
 ];
 
 const solutionsForLetter = {
@@ -80,6 +114,114 @@ const solutionsForLetter = {
   )} et ${showKeyTemp(
     ". ;"
   )} qui se trouve en haut à droite de la barre espace`,
+  ",": `Appuyer sur la touche ${showKeyTemp(
+    "? ,"
+  )} qui se trouve en haut à droite de la barre espace ${showKeyTemp(" ")}`,
+  â: `Appuyer sur la touche ${showKeyTemp(
+    "¨ ^"
+  )} qui se trouve à gauche de la touche Entrer ${showKeyTemp(
+    "enter"
+  )} ensuite, appuyer sur la touche ${showKeyTemp("a")}`,
+  ê: `Appuyer sur la touche ${showKeyTemp(
+    "¨ ^"
+  )} qui se trouve à gauche de la touche Entrer ${showKeyTemp(
+    "enter"
+  )} ensuite, appuyer sur la touche ${showKeyTemp("e")}`,
+  î: `Appuyer sur la touche ${showKeyTemp(
+    "¨ ^"
+  )} qui se trouve à gauche de la touche Entrer ${showKeyTemp(
+    "enter"
+  )} ensuite, appuyer sur la touche ${showKeyTemp("i")}`,
+  ô: `Appuyer sur la touche ${showKeyTemp(
+    "¨ ^"
+  )} qui se trouve à gauche de la touche Entrer ${showKeyTemp(
+    "enter"
+  )} ensuite, appuyer sur la touche ${showKeyTemp("o")}`,
+  û: `Appuyer sur la touche ${showKeyTemp(
+    "¨ ^"
+  )} qui se trouve à gauche de la touche Entrer ${showKeyTemp(
+    "enter"
+  )} ensuite, appuyer sur la touche ${showKeyTemp("u")}`,
+  "'": `Appuyer sur la touche ${showKeyTemp("'")}`,
+  ç: `Appuyer sur la touche ${showKeyTemp("9 ç,^")}`,
+  A: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`A`)}`,
+  B: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`B`)}`,
+  C: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`C`)}`,
+  D: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`D`)}`,
+  E: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`E`)}`,
+  F: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`F`)}`,
+  G: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`G`)}`,
+  H: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`H`)}`,
+  I: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`I`)}`,
+  J: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`J`)}`,
+  K: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`K`)}`,
+  L: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`L`)}`,
+  M: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`M`)}`,
+  N: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`N`)}`,
+  O: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`O`)}`,
+  P: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`P`)}`,
+  Q: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`Q`)}`,
+  R: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`R`)}`,
+  S: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`S`)}`,
+  T: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`T`)}`,
+  U: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`U`)}`,
+  V: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`V`)}`,
+  W: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`W`)}`,
+  X: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`X`)}`,
+  Y: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`Y`)}`,
+  Z: `Appuyer en même temps sur la touche Majuscule ${showKeyTemp(
+    "shift"
+  )} et ${showKeyTemp(`Z`)}`,
 };
 
 function App() {
