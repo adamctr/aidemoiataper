@@ -5,66 +5,77 @@ import backspace from "../backspace.png";
 import enter from "../enter.png";
 import shift from "../shift.png";
 
+const DivKey = ({ width, img, alt, children }) => {
+  const responsiveWidthValues = (width) => {
+    switch (width) {
+      case 28:
+        return 16;
+      case 20:
+        return 14;
+      case 14:
+        return 10;
+    }
+  };
+  return (
+    <div
+      className={`relative inline-block border-5 w-${width} max-md:w-${responsiveWidthValues(
+        width
+      )} align-middle mx-1`}
+    >
+      <img
+        className=" absolute left-[50%] top-[50%]  translate-x-[-50%] translate-y-[-50%]"
+        src={img}
+        alt={alt}
+      />
+      <div className="absolute text-[1.3rem] max-md:text-[1rem] max-md:leading-4 leading-5 pb-[5%] font-bold text-black left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+        {children}
+      </div>
+    </div>
+  );
+};
+
 export default ({ children }) => {
   switch (children) {
     case " ":
       return (
-        <div className="relative inline-block border-5  align-middle w-28 mx-1">
-          <img
-            className=" absolute left-[50%] top-[50%]  translate-x-[-50%] translate-y-[-50%]"
-            src={spacebar}
-            alt={"Touche de clavier intitulé Barre Espace"}
-          />
-          <div className="absolute text-[1.3rem] leading-5  pb-[5%] font-bold text-black left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
-            {children}
-          </div>
-        </div>
+        <DivKey
+          width={28}
+          img={spacebar}
+          alt="Touche de clavier intitulé Barre Espace"
+        ></DivKey>
       );
     case "backspace":
       return (
-        <div className="relative inline-block border-5 align-middle  w-14 h-14 mx-1">
-          <img
-            className=" absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
-            src={backspace}
-            alt={"Touche de clavier intitulé Effacer"}
-          />
-          <div className="absolute text-[1.3rem] leading-5  pb-[5%] font-bold text-black left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
-        </div>
+        <DivKey
+          width="14"
+          img={backspace}
+          alt="Touche de clavier intitulé Effacer"
+        ></DivKey>
       );
     case "shift":
       return (
-        <div className="relative inline-block border-5 align-middle  w-20 h-14 mx-1">
-          <img
-            className=" absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
-            src={shift}
-            alt={"Touche de clavier intitulé Effacer"}
-          />
-          <div className="absolute text-[1.3rem] leading-5  pb-[5%] font-bold text-black left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
-        </div>
+        <DivKey
+          width={20}
+          img={shift}
+          alt="Touche de clavier intitulé Majuscule (Shift)"
+        ></DivKey>
       );
     case "enter":
       return (
-        <div className="relative inline-block border-5 align-middle  w-14 h-14 mx-1">
-          <img
-            className=" absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
-            src={enter}
-            alt={"Touche de clavier intitulé Effacer"}
-          />
-          <div className="absolute text-[1.3rem] leading-5  pb-[5%] font-bold text-black left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"></div>
-        </div>
+        <DivKey
+          width={14}
+          img={enter}
+          alt="Touche de clavier intitulé Entrer"
+        ></DivKey>
       );
     default:
       return (
-        <div className="relative inline-block border-5 align-middle  w-14 h-14 mx-1">
-          <img
-            className=" absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
-            src={key}
-            alt={"Touche de clavier intitulé " + { children }}
-          />
-          <div className="absolute text-[1.3rem] leading-5  pb-[5%] font-bold text-black left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
-            {children}
-          </div>
-        </div>
+        <DivKey
+          width={14}
+          img={key}
+          alt={"Touche de clavier intitulé " + { children }}
+          children={children}
+        ></DivKey>
       );
   }
 };
