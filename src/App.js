@@ -2,12 +2,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import TitleKey from "./Components/TitleKey";
 import PopUp from "./Components/PopUp";
-import {
-  SEPARATOR,
-  KEY_SEP,
-  splitKeySentence,
-  showKeyTemp,
-} from "./constants/keySep";
+import { showKeyTemp } from "./constants/keySep";
 import { quotes } from "./constants/quotes";
 import { solutionsForLetter } from "./constants/solutionsForLetter";
 

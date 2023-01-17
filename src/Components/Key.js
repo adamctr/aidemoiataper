@@ -5,36 +5,24 @@ import backspace from "../backspace.png";
 import enter from "../enter.png";
 import shift from "../shift.png";
 
-const DivKey = ({ width, img, alt, children }) => {
-  const responsiveWidthValues = (width) => {
-    switch (width) {
-      case 28:
-        return 16;
-      case 20:
-        return 14;
-      case 14:
-        return 10;
-    }
-  };
-  return (
-    <div
-      className={`relative inline-block border-5 w-${width} max-md:w-${responsiveWidthValues(
-        width
-      )} align-middle mx-1`}
-    >
-      <img
-        className=" absolute left-[50%] top-[50%]  translate-x-[-50%] translate-y-[-50%]"
-        src={img}
-        alt={alt}
-      />
-      <div className="absolute text-[1.3rem] max-md:text-[1rem] max-md:leading-4 leading-5 pb-[5%] font-bold text-black left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
-        {children}
-      </div>
-    </div>
-  );
-};
-
 export default ({ children }) => {
+  const DivKey = ({ width, img, alt, children }) => {
+    return (
+      <div
+        className={`relative inline-block align-middle mx-1 border-5 w-${width} max-md:scale-[0.8]`}
+      >
+        <img
+          className=" absolute left-[50%] top-[50%]  translate-x-[-50%] translate-y-[-50%]"
+          src={img}
+          alt={alt}
+        />
+        <div className="absolute text-[1.3rem]   leading-5 pb-[5%] font-bold text-black left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+          {children}
+        </div>
+      </div>
+    );
+  };
+
   switch (children) {
     case " ":
       return (
@@ -47,7 +35,7 @@ export default ({ children }) => {
     case "backspace":
       return (
         <DivKey
-          width="14"
+          width={14}
           img={backspace}
           alt="Touche de clavier intitulé Effacer"
         ></DivKey>
@@ -73,7 +61,7 @@ export default ({ children }) => {
         <DivKey
           width={14}
           img={key}
-          alt={"Touche de clavier intitulé " + { children }}
+          alt={`Touche de clavier intitulé ${children}`}
           children={children}
         ></DivKey>
       );
